@@ -26,8 +26,7 @@ Hi! My name is [**Andrei**](https://andzcr.github.io), and I enjoy creating clea
 
 ---
 
-### <img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" width="35" style="vertical-align:bottom" /> Connect with me
-I usually respond within 24 hours.
+### <img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" width="35" style="vertical-align:bottom" /> Connect with me // I usually respond within 24 hours.
 
 <div align="left">
 <a href="https://facebook.com/@andzcr"><img src="https://www.readmecodegen.com/api/social-icon?name=facebook&size=32&animation=fade&animationDuration=5&color=%23ffffff&link=https%3A%2F%2Ffacebook%2F%40andzcr" alt="facebook" /></a>&nbsp; <a href="https://instagram.com/@ndr.xc"><img src="https://www.readmecodegen.com/api/social-icon?name=instagram&size=32&animation=fade&animationDuration=5&color=%23ffffff&link=https%3A%2F%2Finstagram.com%2F%40ndr.xc" alt="instagram" /></a>&nbsp; <a href="https://discord.com/user/andzcr"><img src="https://www.readmecodegen.com/api/social-icon?name=discord&size=32&animation=fade&animationDuration=5&color=%23ffffff&link=https%3A%2F%2Fdiscord.com%2Fuser%2Fandzcr" alt="discord" /></a>&nbsp; <a href="https://tiktok.com/@andzcr"><img src="https://www.readmecodegen.com/api/social-icon?name=tiktok&size=32&theme=dark&animation=fade&animationDuration=5&color=%23ffffff&link=https%3A%2F%2Ftiktok.com%2F%40andzcr" alt="tiktok" /></a>&nbsp; <a href="mailto:lehadus04@gmail.com"><img src="https://www.readmecodegen.com/api/social-icon?name=gmail&size=32&animation=fade&animationDuration=5&color=%23ffffff" alt="gmail" /></a>
