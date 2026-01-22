@@ -1,8 +1,8 @@
-name: Update Holographic HUD
+name: Update iOS Widget
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '*/30 * * * *' # Ruleaza la fiecare 30 minute
   workflow_dispatch:
 
 jobs:
@@ -30,6 +30,6 @@ jobs:
         run: |
           git config --global user.name "andzcr-bot"
           git config --global user.email "bot@andzcr.com"
-          git add hud_card.svg
-          git commit -m "Update system hud" || echo "No changes to commit"
+          git add ios_card.svg
+          git commit -m "Update iOS widget status" || echo "No changes to commit"
           git push
