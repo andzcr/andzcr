@@ -2,10 +2,27 @@ import requests
 import datetime
 from datetime import timedelta
 import html
+import base64
 
 # --- CONFIGURARE ---
 USERNAME = "andzcr"
-LOGO_URL = "https://raw.githubusercontent.com/andzcr/andzcr.github.io/main/resources/photos/andz-logo.png"
+# Link-ul RAW catre logo-ul tau (folosim raw pentru a lua bitii imaginii)
+LOGO_URL = "https://raw.githubusercontent.com/andzcr/andzcr/main/logo.png"
+
+def get_logo_base64():
+    """
+    Descarca logo-ul si il converteste in Base64 pentru a fi integrat
+    direct in SVG. Asta rezolva problema cu imaginea care nu se incarca.
+    """
+    try:
+        r = requests.get(LOGO_URL, timeout=10)
+        if r.status_code == 200:
+            # Convertim in string base64
+            b64_data = base64.b64encode(r.content).decode('utf-8')
+            return f"data:image/png;base64,{b64_data}"
+    except:
+        pass
+    return "" # Returnam gol daca nu reusim
 
 def get_data():
     try:
@@ -15,7 +32,7 @@ def get_data():
         if r.status_code != 200 or not r.json(): return None, None
         repo = r.json()[0]
         
-        # 2. Luam ultimul commit SPECIFIC (pentru a avea stats despre linii)
+        # 2. Luam ultimul commit SPECIFIC
         last_sha = requests.get(f"https://api.github.com/repos/{USERNAME}/{repo['name']}/commits", timeout=10).json()[0]['sha']
         c_url = f"https://api.github.com/repos/{USERNAME}/{repo['name']}/commits/{last_sha}"
         c = requests.get(c_url, timeout=10)
@@ -28,7 +45,7 @@ def get_data():
 def create_dashboard(repo, commit):
     if not repo: return
 
-    # --- DATE ---
+    # --- PREGATIRE DATE ---
     name = html.escape(repo['name'])
     desc = html.escape(repo['description']) if repo['description'] else "No description provided."
     if len(desc) > 55: desc = desc[:52] + "..."
@@ -36,19 +53,18 @@ def create_dashboard(repo, commit):
     language = html.escape(repo['language']) if repo['language'] else "Dev"
     
     lines_edited = "0"
-    action_verb = "Edited" # Default verb
+    action_verb = "Edited" # Default
 
     if commit:
         msg = commit['commit']['message'].split('\n')[0]
         
-        # Logica detectare "Removed" vs "Edited"
+        # Logica: daca mesajul contine "removed", schimbam verbul
         if "removed" in msg.lower():
             action_verb = "Removed"
             
         if len(msg) > 40: msg = msg[:38] + "..."
         msg = html.escape(msg)
         
-        # Extragem stats
         if 'stats' in commit:
             total_lines = commit['stats']['total']
             lines_edited = f"{total_lines}"
@@ -62,13 +78,13 @@ def create_dashboard(repo, commit):
     
     diff_minutes = (now_ro - last_push_ro).total_seconds() / 60
     
-    # --- LOGICA CULORI & STATUS ---
+    # --- LOGICA CULORI ---
     if diff_minutes < 45:
         # ACTIVE
         status_text = "ACTIVE"
         status_color = "#ffffff" 
-        dot_color = "#58a6ff"    # GitHub Blue (Active Dot)
-        border_color = "#ffffff" # White Outline (Active)
+        dot_color = "#58a6ff"    # GitHub Blue (Active)
+        border_color = "#ffffff" # White Outline
     else:
         # INACTIVE
         status_text = "OFFLINE"
@@ -79,7 +95,10 @@ def create_dashboard(repo, commit):
     current_time = now_ro.strftime("%H:%M")
     current_date = now_ro.strftime("%d %b")
 
-    # SVG
+    # Obtinem imaginea codata
+    logo_href = get_logo_base64()
+
+    # --- SVG GENERATOR ---
     svg = f"""
     <svg width="800" height="260" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
@@ -149,7 +168,7 @@ def create_dashboard(repo, commit):
       <g transform="translate(260, 10)">
           <rect x="2" y="2" width="526" height="236" rx="20" fill="url(#bg-grad)" stroke="#30363d" stroke-width="1" />
           
-          <image href="{LOGO_URL}" x="300" y="13" height="210" opacity="0.08" />
+          <image href="{logo_href}" x="300" y="13" height="210" opacity="0.08" />
 
           <rect x="2" y="2" width="526" height="236" rx="20" class="border-anim-right" />
           
