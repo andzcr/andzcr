@@ -31,7 +31,7 @@ Hi! My name is [**Andrei**](https://andzcr.github.io), and I enjoy creating clea
 <div align="left">
 <a href="https://facebook.com/@andzcr"><img src="https://www.readmecodegen.com/api/social-icon?name=facebook&size=32&animation=fade&animationDuration=5&color=%23ffffff&link=https%3A%2F%2Ffacebook%2F%40andzcr" alt="facebook" /></a>&nbsp; <a href="https://instagram.com/ndr.xc"><img src="https://www.readmecodegen.com/api/social-icon?name=instagram&size=32&animation=fade&animationDuration=5&color=%23ffffff&link=https%3A%2F%2Finstagram.com%2F%40ndr.xc" alt="instagram" /></a>&nbsp; <a href="https://discord.com/user/andzcr"><img src="https://www.readmecodegen.com/api/social-icon?name=discord&size=32&animation=fade&animationDuration=5&color=%23ffffff&link=https%3A%2F%2Fdiscord.com%2Fuser%2Fandzcr" alt="discord" /></a>&nbsp; <a href="https://tiktok.com/@andz_cr"><img src="https://www.readmecodegen.com/api/social-icon?name=tiktok&size=32&theme=dark&animation=fade&animationDuration=5&color=%23ffffff&link=https%3A%2F%2Ftiktok.com%2F%40andzcr" alt="tiktok" /></a>&nbsp; <a href="mailto:lehadus04@gmail.com"><img src="https://www.readmecodegen.com/api/social-icon?name=gmail&size=32&animation=fade&animationDuration=5&color=%23ffffff" alt="gmail" /></a>
 </div>
-<div align="center">
-  <img src="./hud_card.svg" width="100%" />
-</div>
 
+<div align="center">
+  <img src="./ios_card.svg" width="450" />
+</div>
