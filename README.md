@@ -33,4 +33,5 @@ Hi! My name is [**Andrei**](https://andzcr.github.io), and I enjoy creating clea
 </div>
 
 ### 🚀 Last Project I've Worked On
-![Last Project](https://github.com/andzcr/andzcr/last_project.svg)
+![Last Project](https://raw.githubusercontent.com/andzcr/andzcr/main/last_project.svg)
+
