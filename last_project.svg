@@ -1,0 +1,28 @@
+
+    <svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <style>
+        .title { font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 24px; font-weight: bold; fill: #ffffff; }
+        .desc { font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 16px; fill: #cccccc; }
+        .stat { font-family: 'Segoe UI', Ubuntu, Sans-Serif; font-size: 14px; fill: #00ff00; font-weight: bold; }
+        .bg-overlay { fill: rgba(0, 0, 0, 0.7); }
+        .border { fill: none; stroke: #30363d; stroke-width: 2px; rx: 10px; }
+      </style>
+      
+      <defs>
+        <clipPath id="clip">
+          <rect width="800" height="200" rx="10" />
+        </clipPath>
+      </defs>
+      <image href="https://github.com/andzcr/andzcr/assets/banner.gif" width="800" height="200" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip)" />
+      
+      <rect x="0" y="0" width="800" height="200" class="bg-overlay" clip-path="url(#clip)" />
+      
+      <text x="30" y="50" class="title">Last Project: andzcr</text>
+      <text x="30" y="85" class="desc">My Personal ReadMe File Config</text>
+      
+      <text x="30" y="140" class="stat">⚡ Last Update: 22 Jan 2026, 08:46</text>
+      <text x="30" y="165" class="stat">💻 Main Language: Python</text>
+      
+      <rect x="1" y="1" width="798" height="198" class="border" rx="10" />
+    </svg>
+    
