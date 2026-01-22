@@ -1,0 +1,50 @@
+
+    <svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        .bg { fill: #0d1117; stroke: #a371f7; stroke-width: 2px; rx: 10px; } 
+        /* Stroke mov pentru contrast cu celalalt card */
+        .text { font-family: 'Courier New', monospace; fill: #fff; }
+        .header { font-size: 14px; font-weight: bold; fill: #a371f7; }
+      </style>
+      
+      <rect width="398" height="198" x="1" y="1" class="bg" />
+      
+      <text x="20" y="30" class="header">/// SKILL_ARSENAL_ANALYSIS</text>
+      <line x1="20" y1="40" x2="380" y2="40" stroke="#30363d" />
+      
+      
+        <text x="20" y="60" class="text" font-size="12">CSS</text>
+        <text x="330" y="60" class="text" font-size="12" text-anchor="end">61%</text>
+        
+        <rect x="20" y="65" width="200" height="6" rx="3" fill="#30363d" />
+        <rect x="20" y="65" width="0" height="6" rx="3" fill="#f1e05a">
+            <animate attributeName="width" from="0" to="123" dur="1s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+        </rect>
+        
+        <text x="20" y="95" class="text" font-size="12">Python</text>
+        <text x="330" y="95" class="text" font-size="12" text-anchor="end">19%</text>
+        
+        <rect x="20" y="100" width="200" height="6" rx="3" fill="#30363d" />
+        <rect x="20" y="100" width="0" height="6" rx="3" fill="#3178c6">
+            <animate attributeName="width" from="0" to="39" dur="1s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+        </rect>
+        
+        <text x="20" y="130" class="text" font-size="12">HTML</text>
+        <text x="330" y="130" class="text" font-size="12" text-anchor="end">18%</text>
+        
+        <rect x="20" y="135" width="200" height="6" rx="3" fill="#30363d" />
+        <rect x="20" y="135" width="0" height="6" rx="3" fill="#e34c26">
+            <animate attributeName="width" from="0" to="36" dur="1s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+        </rect>
+        
+        <text x="20" y="165" class="text" font-size="12">JavaScript</text>
+        <text x="330" y="165" class="text" font-size="12" text-anchor="end">0%</text>
+        
+        <rect x="20" y="170" width="200" height="6" rx="3" fill="#30363d" />
+        <rect x="20" y="170" width="0" height="6" rx="3" fill="#563d7c">
+            <animate attributeName="width" from="0" to="0" dur="1s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+        </rect>
+        
+      
+    </svg>
+    
