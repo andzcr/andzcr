@@ -16,7 +16,6 @@ def get_data():
         repo = r.json()[0]
         
         # 2. Luam ultimul commit SPECIFIC (pentru a avea stats despre linii)
-        # Endpoint-ul generic de commits nu da stats, trebuie accesat commit-ul individual
         last_sha = requests.get(f"https://api.github.com/repos/{USERNAME}/{repo['name']}/commits", timeout=10).json()[0]['sha']
         c_url = f"https://api.github.com/repos/{USERNAME}/{repo['name']}/commits/{last_sha}"
         c = requests.get(c_url, timeout=10)
@@ -37,10 +36,18 @@ def create_dashboard(repo, commit):
     language = html.escape(repo['language']) if repo['language'] else "Dev"
     
     lines_edited = "0"
+    action_verb = "Edited" # Default verb
+
     if commit:
         msg = commit['commit']['message'].split('\n')[0]
+        
+        # Logica detectare "Removed" vs "Edited"
+        if "removed" in msg.lower():
+            action_verb = "Removed"
+            
         if len(msg) > 40: msg = msg[:38] + "..."
         msg = html.escape(msg)
+        
         # Extragem stats
         if 'stats' in commit:
             total_lines = commit['stats']['total']
@@ -59,15 +66,15 @@ def create_dashboard(repo, commit):
     if diff_minutes < 45:
         # ACTIVE
         status_text = "ACTIVE"
-        status_color = "#ffffff" # Alb pur pentru text status
-        dot_color = "#00ff88"    # Verde pentru bulina
-        border_color = "#ffffff" # Alb pentru Outline
+        status_color = "#ffffff" 
+        dot_color = "#58a6ff"    # GitHub Blue (Active Dot)
+        border_color = "#ffffff" # White Outline (Active)
     else:
         # INACTIVE
         status_text = "OFFLINE"
-        status_color = "#ff4d4d" # Rosu deschis text
-        dot_color = "#ff0000"    # Rosu pur bulina
-        border_color = "#ff0000" # Rosu pentru Outline
+        status_color = "#ff4d4d" 
+        dot_color = "#ff0000"    # Red Dot
+        border_color = "#ff0000" # Red Outline
 
     current_time = now_ro.strftime("%H:%M")
     current_date = now_ro.strftime("%d %b")
@@ -82,8 +89,7 @@ def create_dashboard(repo, commit):
             .text-dim {{ fill: #8b949e; }}
             .text-status {{ fill: {status_color}; }}
             
-            /* ANIMATII BORDER - Calibrate pe perimetru exact */
-            /* Right Card Perimeter approx 1524px -> dasharray 400 1124 = 1524 total */
+            /* ANIMATII BORDER */
             @keyframes flowRight {{
                 to {{ stroke-dashoffset: -1600; }}
             }}
@@ -98,7 +104,6 @@ def create_dashboard(repo, commit):
                 filter: drop-shadow(0 0 5px {border_color});
             }}
 
-            /* Left Card Perimeter approx 924px -> dasharray 250 750 = 1000 total */
             @keyframes flowLeft {{
                 to {{ stroke-dashoffset: -1000; }}
             }}
@@ -150,7 +155,7 @@ def create_dashboard(repo, commit):
           
           <text x="30" y="40" class="font-main text-dim" font-size="11" font-weight="600" letter-spacing="1">CURRENT FOCUS</text>
           
-          <text x="500" y="40" text-anchor="end" class="font-main text-dim" font-size="11" font-family="monospace">Edited {lines_edited} lines</text>
+          <text x="500" y="40" text-anchor="end" class="font-main text-dim" font-size="11" font-family="monospace">{action_verb} {lines_edited} lines</text>
           
           <text x="30" y="90" class="font-main text-white" font-size="32" font-weight="800">{name}</text>
           <text x="30" y="120" class="font-main text-dim" font-size="14" width="450">{desc}</text>
