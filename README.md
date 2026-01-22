@@ -1,7 +1,7 @@
 <div align="center">
 
   <h1>
-    <img src="https://raw.githubusercontent.com/andzcr/andzcr/main/logo.png" width="80" style="vertical-align:middle" /> 
+    <img src="https://raw.githubusercontent.com/andzcr/andzcr/main/logo.png" width="55" style="vertical-align:middle" /> 
     A N D Z / / S T U D I O
   </h1>
 
