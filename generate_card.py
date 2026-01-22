@@ -5,7 +5,7 @@ from datetime import timedelta
 # CONFIGURARE
 USERNAME = "andzcr"
 # Link-ul RAW catre logo-ul tau (important: raw, nu blob)
-LOGO_URL = "https://raw.githubusercontent.com/andzcr/andzcr.github.io/resources/photos/andz-logo.png"
+LOGO_URL = "https://andzcr.github.io/resources/photos/andz-logo.png"
 
 def get_data():
     try:
