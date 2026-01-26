@@ -9,7 +9,7 @@
 
   <br><br>
   <p align="center" style="max-width: 600px;">
-    Hi! My name is <a href="https://andzcr.github.io" style="text-decoration:none; color:#ffffff;"><b>Andrei</b></a>, and I enjoy creating clean, intuitive, and visually engaging user experiences. I'm a serious and detail-oriented person who doesn't give up until I achieve the result I want. Constant growth is important to me, and I'm continuously working on both my personal and professional development.
+    Hi! My name is <a href="https://andz.ro" style="text-decoration:none; color:#ffffff;"><b>Andrei</b></a>, and I enjoy creating clean, intuitive, and visually engaging user experiences. I'm a serious and detail-oriented person who doesn't give up until I achieve the result I want. Constant growth is important to me, and I'm continuously working on both my personal and professional development.
   </p>
 
   <p>
@@ -17,7 +17,7 @@
       <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
     </a>
     &nbsp;
-    <a href="https://andzcr.github.io">
+    <a href="https://andz.ro">
       <img src="https://img.shields.io/badge/PORTFOLIO-1C1C1E?style=for-the-badge" alt="Portfolio">
     </a>
   </p>
