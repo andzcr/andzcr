@@ -7,8 +7,8 @@ I develop websites where clarity, performance, and attention to detail come toge
 
 <p>
   <a href="https://andz.ro" target="_blank">Website</a> •
-  <a href="https://www.linkedin.com/in/andzcr" target="_blank">LinkedIn</a> •
-  <a href="mailto:andzcr@gmail.com">Email</a>
+  <a href="https://www.linkedin.com/in/andzstudio" target="_blank">LinkedIn</a> •
+  <a href="mailto:andz.studio@gmail.com">Email</a>
 </p>
 
 ---
