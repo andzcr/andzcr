@@ -2,7 +2,7 @@
 <h3>Software Engineer • Web Developer</h3>
 
 <p>
-  I design and build clean, performant web applications with a strong focus on UX, scalability, and aesthetics.
+I develop websites where clarity, performance, and attention to detail come together.
 </p>
 
 <p>
@@ -21,7 +21,7 @@
 - 🚀 Interested in **SaaS, AI-powered apps, developer tools & UX-driven products**
 - 🎯 Constantly improving, learning, and refining both code and visuals
 
-> I believe good software is not just functional - it feels right.
+> Built for today, flexible for what's next. 
 
 ---
 
