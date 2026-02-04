@@ -1,4 +1,4 @@
-<h1>Hi 👋, I'm ANDZ</h1>
+<h1>Hi 👋🏻, I'm ANDZ</h1>
 <h3>Software Engineer • Web Developer</h3>
 
 <p>
@@ -13,7 +13,7 @@ I develop websites where clarity, performance, and attention to detail come toge
 
 ---
 
-## 👨‍💻 About Me
+## ⚡️ About Me
 
 - 💡 Software Engineer & Web Developer with a strong eye for design  
 - ⚙️ Focused on **modern web technologies**, clean architecture, and real-world products  
